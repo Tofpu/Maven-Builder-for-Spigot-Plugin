@@ -1,4 +1,4 @@
-name: build-and-package
+name: Maven Builder for Minecraft Spigot Plugin
 on: [push, pull_request]
 jobs:
   build_and_upload:
@@ -9,7 +9,6 @@ jobs:
         with:
           submodules: 'recursive'
       
-      # setup-javaは依存関係のcacheもしてくれる
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -17,11 +16,9 @@ jobs:
           cache: 'maven'
           distribution: 'adopt'
 
-      # pomに基づいてビルド & ./target の中身を ~/artifacts へコピー
       - name: Build with Maven and copy artifacts
         run: mvn -B package -f pom.xml && mkdir ~/artifacts && cp target/*.jar ~/artifacts
 
-      # jarファイルのみをアップロード
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
