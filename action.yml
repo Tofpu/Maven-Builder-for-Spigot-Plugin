@@ -1,4 +1,10 @@
 name: Maven Builder for Spigot Plugin
+author: "JIN-InI"
+description: "Maven builder for Spigot/Paper plugins"
+branding:
+  icon: "settings"
+  color: "orange"
+
 on: [push, pull_request]
 jobs:
   build_and_upload:
