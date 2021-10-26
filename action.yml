@@ -1,4 +1,4 @@
-name: Maven Builder for Minecraft Spigot Plugin
+name: Maven Builder for Spigot Plugin
 on: [push, pull_request]
 jobs:
   build_and_upload:
