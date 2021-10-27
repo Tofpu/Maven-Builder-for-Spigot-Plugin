@@ -9,8 +9,10 @@ This Action uses original "pom.xml", therefore can build by similar to local bui
 # Requirement
 
 * **pom.xml**
+* **SECRET "JAVA_VERSION"**
 
 This Action requires the "pom.xml" that was **available for the local build** to be included in the source code.
+Requires Secret "JAVA_VERSION" too.
 
 # Usage
 
